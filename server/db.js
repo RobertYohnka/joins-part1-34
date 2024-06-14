@@ -83,7 +83,7 @@ const createReservation = async ({ date, party_count, restaurant_id, customer_id
     return response.rows[0];
 }
 
-const destroyReservation = async ({ customer_id, id }) => {
+const destroyReservation = async ({ id, customer_id }) => {
     console.log(id, customer_id)
     const SQL = `
         DELETE FROM reservations
